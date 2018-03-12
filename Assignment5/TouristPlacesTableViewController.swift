@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import CoreData
 
 class TouristPlacesTableViewController: UITableViewController {
-
+    
+    
+    @IBOutlet weak var add: UIBarButtonItem!
+     var managedObjectContext: NSManagedObjectContext!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -12,7 +12,7 @@
         <!--World Attractions-->
         <scene sceneID="jOg-MX-gJa">
             <objects>
-                <tableViewController id="GAL-kn-LDX" sceneMemberID="viewController">
+                <tableViewController id="GAL-kn-LDX" customClass="TouristPlacesTableViewController" customModule="Assignment5" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SaK-Ns-zCu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,6 +51,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="add" destination="QaP-KQ-fE3" id="njJ-20-2lG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6tH-dm-dTF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -59,7 +62,7 @@
         <!--Title-->
         <scene sceneID="YxU-3m-M3E">
             <objects>
-                <tableViewController id="2Zf-un-peU" sceneMemberID="viewController">
+                <tableViewController id="2Zf-un-peU" customClass="AddPlacesTableViewController" customModule="Assignment5" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="omu-Mx-6ne">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
