@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3F9D32672057369F005F74F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9D32662057369F005F74F9 /* AppDelegate.swift */; };
-		3F9D32692057369F005F74F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9D32682057369F005F74F9 /* ViewController.swift */; };
 		3F9D326C2057369F005F74F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9D326A2057369F005F74F9 /* Main.storyboard */; };
 		3F9D326F2057369F005F74F9 /* Assignment5.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F9D326D2057369F005F74F9 /* Assignment5.xcdatamodeld */; };
 		3F9D32712057369F005F74F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F9D32702057369F005F74F9 /* Assets.xcassets */; };
 		3F9D32742057369F005F74F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9D32722057369F005F74F9 /* LaunchScreen.storyboard */; };
 		3F9D327F2057369F005F74F9 /* Assignment5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9D327E2057369F005F74F9 /* Assignment5Tests.swift */; };
 		3F9D328A2057369F005F74F9 /* Assignment5UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9D32892057369F005F74F9 /* Assignment5UITests.swift */; };
+		3F9D32982057382E005F74F9 /* TouristPlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9D32972057382E005F74F9 /* TouristPlacesTableViewController.swift */; };
+		3F9D329A20573843005F74F9 /* AddPlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9D329920573843005F74F9 /* AddPlacesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,6 @@
 /* Begin PBXFileReference section */
 		3F9D32632057369F005F74F9 /* Assignment5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9D32662057369F005F74F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F9D32682057369F005F74F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3F9D326B2057369F005F74F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F9D326E2057369F005F74F9 /* Assignment5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Assignment5.xcdatamodel; sourceTree = "<group>"; };
 		3F9D32702057369F005F74F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		3F9D32852057369F005F74F9 /* Assignment5UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Assignment5UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9D32892057369F005F74F9 /* Assignment5UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment5UITests.swift; sourceTree = "<group>"; };
 		3F9D328B2057369F005F74F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F9D32972057382E005F74F9 /* TouristPlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristPlacesTableViewController.swift; sourceTree = "<group>"; };
+		3F9D329920573843005F74F9 /* AddPlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlacesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +102,13 @@
 			isa = PBXGroup;
 			children = (
 				3F9D32662057369F005F74F9 /* AppDelegate.swift */,
-				3F9D32682057369F005F74F9 /* ViewController.swift */,
 				3F9D326A2057369F005F74F9 /* Main.storyboard */,
 				3F9D32702057369F005F74F9 /* Assets.xcassets */,
 				3F9D32722057369F005F74F9 /* LaunchScreen.storyboard */,
 				3F9D32752057369F005F74F9 /* Info.plist */,
 				3F9D326D2057369F005F74F9 /* Assignment5.xcdatamodeld */,
+				3F9D32972057382E005F74F9 /* TouristPlacesTableViewController.swift */,
+				3F9D329920573843005F74F9 /* AddPlacesTableViewController.swift */,
 			);
 			path = Assignment5;
 			sourceTree = "<group>";
@@ -262,7 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F9D32692057369F005F74F9 /* ViewController.swift in Sources */,
+				3F9D32982057382E005F74F9 /* TouristPlacesTableViewController.swift in Sources */,
+				3F9D329A20573843005F74F9 /* AddPlacesTableViewController.swift in Sources */,
 				3F9D32672057369F005F74F9 /* AppDelegate.swift in Sources */,
 				3F9D326F2057369F005F74F9 /* Assignment5.xcdatamodeld in Sources */,
 			);
