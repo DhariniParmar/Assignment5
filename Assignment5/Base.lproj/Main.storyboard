@@ -52,7 +52,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="add" destination="QaP-KQ-fE3" id="njJ-20-2lG"/>
+                        <outlet property="add" destination="QaP-KQ-fE3" id="ATh-9I-U8z"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6tH-dm-dTF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -170,9 +170,22 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="kG2-AD-oFb">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="F3J-kw-jBq"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="9OE-q4-SFq"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="F3J-kw-jBq">
+                            <connections>
+                                <action selector="cancel:" destination="2Zf-un-peU" id="aie-0O-DYm"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="9OE-q4-SFq">
+                            <connections>
+                                <action selector="done:" destination="2Zf-un-peU" id="MSd-xf-yb8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="locationNameTextField" destination="nzb-Bo-P93" id="dZm-eB-JIz"/>
+                        <outlet property="placeNameTextField" destination="yJm-o1-AXe" id="Sji-z0-sFH"/>
+                        <outlet property="sliderValue" destination="346-0e-WqP" id="jCK-NW-zFM"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hTn-DV-fdy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -194,7 +207,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jIZ-V8-Mmt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="458" y="-115"/>
+            <point key="canvasLocation" x="332" y="-129"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

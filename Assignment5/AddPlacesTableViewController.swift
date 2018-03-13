@@ -7,8 +7,32 @@
 //
 
 import UIKit
+import CoreData
+
+protocol  AddPlacesVCDelegate:class {
+    
+    func PlaceVC(_ controller: AddPlacesTableViewController, didAddPlace place:Place)
+    func PlaceVC(_ controller: AddPlacesTableViewController, didEditPlace place:Place)
+    func PlaceVCCancel()
+    
+    
+}
 
 class AddPlacesTableViewController: UITableViewController {
+    
+    
+    @IBOutlet weak var placeNameTextField: UITextField!
+    
+    @IBOutlet weak var locationNameTextField: UITextField!
+    
+    @IBOutlet weak var sliderValue: UISlider!
+    
+    weak var delegate: AddPlacesVCDelegate?
+    var managedObjectContext: NSManagedObjectContext!
+    
+    var place:Place?
+    
+    var editPlace : Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,14 +43,45 @@ class AddPlacesTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    
+    
+    @IBAction func done(_ sender: Any) {
+        
+        if !editPlace {
+            place = Place(context: managedObjectContext)
+        }
+        place!.placename = placeNameTextField.text
+        place!.placelocation = locationNameTextField.text
+        place!.rating = sliderValue.value
+        do {
+            try managedObjectContext.save()
+        } catch {
+            print("Core Data Error")
+        }
+        if editPlace {
+            delegate?.PlaceVC(self, didEditPlace: place!)
+        } else {
+            delegate?.PlaceVC(self, didAddPlace: place!)
+        }
+        navigationController?.popViewController(animated: true)
+        
+    }
+    
+    
+    @IBAction func cancel(_ sender: Any) {
+        
+        delegate?.PlaceVCCancel()
+        
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
-
+   /*
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -36,7 +91,7 @@ class AddPlacesTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 4
     }
-
+*/
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
