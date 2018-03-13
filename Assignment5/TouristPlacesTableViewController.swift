@@ -14,6 +14,7 @@ class TouristPlacesTableViewController: UITableViewController {
     
     @IBOutlet weak var add: UIBarButtonItem!
      var managedObjectContext: NSManagedObjectContext!
+    var places = [Place]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +40,7 @@ class TouristPlacesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return places.count
     }
 
     /*
